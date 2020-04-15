@@ -8,7 +8,7 @@ spec:
     app: train-schedule-canary
   ports:
   - protocol: TCP
-    port: 8088
+    port: 80
     nodePort: 30082
 
 ---
@@ -33,4 +33,4 @@ spec:
       - name: train-schedule
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
-        - containerPort: 8088
+        - containerPort: 80
