@@ -33,6 +33,6 @@ spec:
     spec:
       containers:
       - name: train-schedule
-        image: jduarte104/train-schedule:1
+        image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
         - containerPort: 8080
