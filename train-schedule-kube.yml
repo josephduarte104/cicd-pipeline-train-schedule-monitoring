@@ -1,5 +1,6 @@
 kind: Service
 apiVersion: v1
+namespace: ingress-nginx
 metadata:
   name: train-schedule-canary
 spec:
@@ -15,6 +16,7 @@ spec:
 
 apiVersion: apps/v1
 kind: Deployment
+namespace: ingress-nginx
 metadata:
   name: train-schedule-deployment
   labels:
