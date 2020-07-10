@@ -45,7 +45,7 @@ pipeline {
             steps {
                 input 'Deploy to Production?'
                 milestone(1)
-                withKubeConfig([credentialsId: 'kubeconfig']) {
+                withKubeConfig([credentialsId: 'microk8skubeconfig']) {
                     sh 'kubectl apply -f /var/lib/jenkins/workspace/train_schedule_master/train-schedule-kube.yml'
                 }
             }
