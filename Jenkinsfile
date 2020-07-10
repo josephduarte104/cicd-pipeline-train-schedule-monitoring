@@ -48,7 +48,6 @@ pipeline {
                 kubernetesDeploy(
                     credentialsType: 'KubeConfig',
                     kubeConfig: [path: '~/.kube/config'],
-                    kubeconfigId: 'kubeconfig',
                     configs: 'train-schedule-kube.yml',
                     enableConfigSubstitution: true
                 )
