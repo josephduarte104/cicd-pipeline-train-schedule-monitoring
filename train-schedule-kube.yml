@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: train-schedule-service
-  namespace: ingress-nginx
+  namespace: trainschedule
 spec:
   type: NodePort
   selector:
@@ -18,7 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: train-schedule-deployment
-  namespace: ingress-nginx
+  namespace: trainschedule
   labels:
     app: train-schedule
 spec:
